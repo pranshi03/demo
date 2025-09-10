@@ -1,4 +1,5 @@
 import 'package:demo/presentation/dashboard/dashboard_screen.dart';
+import 'package:demo/presentation/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -11,10 +12,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => DashboardScreen()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
     });
   }
@@ -32,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
               'assets/logo.png', // Make sure you have this image in your assets folder
               height: 120,
             ),
-            SizedBox(height: 20),
-            CircularProgressIndicator(),
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(),
           ],
         ),
       ),
